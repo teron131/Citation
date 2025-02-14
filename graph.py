@@ -15,12 +15,7 @@ llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
 
 class GraphState(BaseModel):
     sentence: str = Field(description="A sentence to be considered.")
-    full_content: str = Field(description="The full content of the paper.")
-
-
-def select_snippet(state: GraphState) -> GraphState:
-    value = interrupt()
-    return state
+    # full_content: str = Field(description="The full content of the paper.")
 
 
 def get_more_context(state: GraphState) -> GraphState:
