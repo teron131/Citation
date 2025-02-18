@@ -79,7 +79,7 @@ builder.add_conditional_edges(
 )
 builder.add_edge("get_full_papers", "select_citation")
 builder.add_edge("select_citation", "write_citation")
-builder.set_finish_point("write_citation")
+builder.add_edge("write_citation", END)
 graph = builder.compile()
 
 # Save the graph visualization
